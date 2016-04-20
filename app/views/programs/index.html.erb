@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Your Programs</h1>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Weight</th>
+        <th>Water</th>
+        <th><div class="green_container" id="tuperware_header"></div></th>
+        <th><div class="purple_container" id="tuperware_header"></div></th>
+        <th><div class="red_container" id="tuperware_header"></div></th>
+        <th><div class="yellow_container" id="tuperware_header"></div></th>
+        <th><div class="blue_container" id="tuperware_header"></div></th>
+        <th><div class="orange_container" id="tuperware_header"></div></th>
+        <th><div class="tbsp_container" id="tuperware_header"></div></th>
+        
+      </tr>
+    </thead>
+  
+    <tbody>
+         <% @programs.each do |program| %>
+        <tr>
+          <td><%= link_to program.id, program_path(program) %></td>
+          <td><%= program.start_weight %></td>
+          <td><%= program.water_goal %></td>
+          <td><%= program.green_limit %></td>
+          <td><%= program.purple_limit %></td>
+          <td><%= program.red_limit %></td>
+          <td><%= program.yellow_limit %></td>
+          <td><%= program.blue_limit %></td>
+          <td><%= program.orange_limit %></td>
+          <td><%= program.tbsp_limit %></td>
+          <td><%= link_to 'Edit', edit_program_path(program) %></td>
+          <td><%= link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<%= link_to 'New Program', new_program_path %>

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  program_id: 
+  weight: 9.99
+  workout: 1
+  water_consumed: 1
+  green_used: 1
+  purple_used: 1
+  red_used: 1
+  yellow_used: 1
+  blue_used: 1
+  orange_used: 1
+  tbsp_used: 1
+
+two:
+  program_id: 
+  weight: 9.99
+  workout: 1
+  water_consumed: 1
+  green_used: 1
+  purple_used: 1
+  red_used: 1
+  yellow_used: 1
+  blue_used: 1
+  orange_used: 1
+  tbsp_used: 1

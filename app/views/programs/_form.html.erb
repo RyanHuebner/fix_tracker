@@ -1,0 +1,53 @@
+<%= form_for(@program) do |f| %>
+  <% if @program.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@program.errors.count, "error") %> prohibited this program from being saved:</h2>
+
+      <ul>
+      <% @program.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :start_weight %><br>
+    <%= f.text_field :start_weight %>
+  </div>
+  <div class="field">
+    <%= f.label :water_goal %><br>
+    <%= f.number_field :water_goal %>
+  </div>
+  <div class="field">
+    <%= f.label :green_limit %><br>
+    <%= f.number_field :green_limit %>
+  </div>
+  <div class="field">
+    <%= f.label :purple_limit %><br>
+    <%= f.number_field :purple_limit %>
+  </div>
+  <div class="field">
+    <%= f.label :red_limit %><br>
+    <%= f.number_field :red_limit %>
+  </div>
+  <div class="field">
+    <%= f.label :yellow_limit %><br>
+    <%= f.number_field :yellow_limit %>
+  </div>
+  <div class="field">
+    <%= f.label :blue_limit %><br>
+    <%= f.number_field :blue_limit %>
+  </div>
+  <div class="field">
+    <%= f.label :orange_limit %><br>
+    <%= f.number_field :orange_limit %>
+  </div>
+  <div class="field">
+    <%= f.label :tbsp_limit %><br>
+    <%= f.number_field :tbsp_limit %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,61 @@
+<%= form_for([@day.program, @day]) do |f| %>
+  <% if @day.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@day.errors.count, "error") %> prohibited this day from being saved:</h2>
+
+      <ul>
+      <% @day.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :weight %><br />
+    <%= f.text_field :weight %>
+  </div>
+  <div class="field">
+     <%= f.label :workout %><br>
+    <%= f.select :workout, options_for_select(@workouts.collect {|s| [s[0].humanize,
+    s[0]]}, selected: @day.workout), {} %>
+  </div>
+  <div class="field">
+    <%= f.label :water_consumed %><br />
+    <%= f.number_field :water_consumed %>
+  </div>
+  <div class="field">
+    <%= f.label :green_used %><br />
+    <%= f.number_field :green_used %>
+  </div>
+  <div class="field">
+    <%= f.label :purple_used %><br />
+    <%= f.number_field :purple_used %>
+  </div>
+  <div class="field">
+    <%= f.label :red_used %><br />
+    <%= f.number_field :red_used %>
+  </div>
+  <div class="field">
+    <%= f.label :yellow_used %><br />
+    <%= f.number_field :yellow_used %>
+  </div>
+  <div class="field">
+    <%= f.label :blue_used %><br />
+    <%= f.number_field :blue_used %>
+  </div>
+  <div class="field">
+    <%= f.label :orange_used %><br />
+    <%= f.number_field :orange_used %>
+  </div>
+  <div class="field">
+    <%= f.label :tbsp_used %><br />
+    <%= f.number_field :tbsp_used %>
+  </div>
+  <br>
+  <div class="actions">
+    <%= f.submit %>
+    <button><%= link_to 'Back', [@day.program, @day] %></button>
+  </div>
+<% end %>
+

@@ -1,0 +1,96 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-primary">
+   <div class="panel-heading">
+      <strong>Program Details</strong>
+      <div class="start_weight">
+        <strong>Start weight: </strong>
+        <%= @program.start_weight %>
+      </div>
+  </div>
+  <div class="panel-body">
+    <strong>Daily Container Limits</strong>
+     <div>
+        <div class="green_container" id="tuperware">
+        <strong><%= @program.green_limit %></strong>
+        </div>
+      </div>
+     <div>
+        <div class="purple_container" id="tuperware">
+        <strong><%= @program.purple_limit %></strong>
+        </div>
+      </div> 
+      <div>
+        <div class="red_container" id="tuperware">
+        <strong><%= @program.red_limit %></strong>
+        </div>
+      </div>
+      <div>
+        <div class="yellow_container" id="tuperware">
+        <strong><%= @program.yellow_limit %></strong>
+        </div>
+      </div>
+     <div>
+        <div class="blue_container" id="tuperware">
+        <strong><%= @program.blue_limit %></strong>
+        </div>
+      </div>
+     <div>
+        <div class="orange_container" id="tuperware">
+        <strong><%= @program.orange_limit %></strong>
+        </div>
+      </div> 
+      <div>
+        <div class="tbsp_container" id="tuperware">
+        <strong><%= @program.tbsp_limit %></strong>
+        </div>
+      </div>
+</div>
+    <div class="panel-footer">
+      <%= link_to 'Edit', edit_program_path(@program) %> |
+      <%= link_to 'Back', programs_path %>
+    </div>
+</div>
+
+<h1>Program Days</h1>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Weight</th>
+        <th>water</th>
+        <th><div class="green_container" id="tuperware_header"></div></th>
+        <th><div class="purple_container" id="tuperware_header"></div></th>
+        <th><div class="red_container" id="tuperware_header"></div></th>
+        <th><div class="yellow_container" id="tuperware_header"></div></th>
+        <th><div class="blue_container" id="tuperware_header"></div></th>
+        <th><div class="orange_container" id="tuperware_header"></div></th>
+        <th><div class="tbsp_container" id="tuperware_header"></div></th>
+        
+      </tr>
+    </thead>
+  
+    <tbody>
+         <% @program.days.each do |day| %>
+        <tr>
+          <td><%= link_to day.id, program_day_path(@program.id, day) %></td>
+          <td><%= day.weight %></td>
+          <td><%= day.water_consumed %></td>
+          <td><%= day.green_used %></td>
+          <td><%= day.purple_used %></td>
+          <td><%= day.red_used %></td>
+          <td><%= day.yellow_used %></td>
+          <td><%= day.blue_used %></td>
+          <td><%= day.orange_used %></td>
+          <td><%= day.tbsp_used %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<br>
+
+<button><%= link_to 'Add Day', program_days_path(@program) %></button>
+
+

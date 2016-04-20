@@ -1,0 +1,64 @@
+// Place all the styles related to the Programs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.start_weight{
+    float: right;
+}
+
+ #tuperware {
+  height: 35px;
+  width: 35px;
+  line-height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  float: left;
+  margin: 20px;
+  
+ }
+ 
+  #tuperware_header {
+  height: 25px;
+  width: 25px;
+  line-height: 25px;
+  text-align: center;
+  vertical-align: middle;
+  float: left;
+  margin: 2px;
+  
+ }
+
+ .green_container {
+  background-color: lime;
+  border: 4px solid green;
+ }
+ 
+ .purple_container {
+  background-color: #bf66ff;
+  border: 4px solid #4b0082;
+ }
+ 
+ .red_container {
+  background-color: #ff4d4d;
+  border: 4px solid #8b0000;
+ }
+ 
+ .yellow_container {
+  background-color: #fff099;
+  border: 4px solid #ffd700;
+ }
+ 
+  .blue_container {
+  background-color: #b3b3ff;
+  border: 4px solid #00008b;
+ }
+ 
+ .orange_container {
+  background-color: #ffa500;
+  border: 4px solid #ff4500;
+ }
+ 
+ .tbsp_container {
+  background-color: #d9d9d9;
+  border: 4px solid #999999;
+ }

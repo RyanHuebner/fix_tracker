@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_weight: 9.99
+  water_goal: 1
+  green_limit: 1
+  purple_limit: 1
+  red_limit: 1
+  yellow_limit: 1
+  blue_limit: 1
+  orange_limit: 1
+  tbsp_limit: 1
+
+two:
+  start_weight: 9.99
+  water_goal: 1
+  green_limit: 1
+  purple_limit: 1
+  red_limit: 1
+  yellow_limit: 1
+  blue_limit: 1
+  orange_limit: 1
+  tbsp_limit: 1

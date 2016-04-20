@@ -1,0 +1,55 @@
+Testing requirements for food_item
+
+    name: string
+    container_color: enum - green, purple, red, yellow, blue, orange, tbsp, free
+    container_value: integer
+
+    - name field must be present
+    - name must be between 3 and 20 characters
+    - container_color must be valid
+
+    
+Testing requirements for day
+
+    weight: decimal
+    workout: enum - none, total body cardio fix, upper fix, lower fix, pilates fix,
+                    cardio fix, dirty 30, yoga fix, plyo fix
+    water_consumed: integer
+    green_used: integer
+    purple_used: integer
+    red_used: integer
+    yellow_used: integer
+    blue_used: integer
+    orange_used: integer
+    tbsp_used: integer
+    
+    - weight field is optional
+    - weight field values must be > 0.0
+    - workout must be valid
+    - water_consumed is optional
+    - water_consumed values must be > 0
+    
+Testing requirements for program
+
+    starting_weight: decimal
+    water_goal: integer
+    green_limit: integer
+    purple_limit: integer
+    red_limit: integer
+    yellow_limit: integer
+    blue_limit: integer
+    orange_limit: integer
+    tbsp_limit: integer
+
+    - starting_weight must be present
+    - starting_weight must be > 0
+    - water_goal must be present
+    - water_goal must be > 0
+    - green_limit must be present, between 3 - 6
+    - purple_limit must be present, between 2 - 4
+    - red_limit must be present, between 4 - 6
+    - yellow_limit must be present, between 2 - 4
+    - blue_limit must be present, equal to 1
+    - orange_limit must be present, equal to 1
+    - tbsp_limit must be present, between 2 - 6
+    

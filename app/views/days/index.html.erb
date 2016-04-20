@@ -1,0 +1,41 @@
+<h1>Listing days</h1>
+
+<table>
+  <tr>
+    <th>Weight</th>
+    <th>Workout</th>
+    <th>Water consumed</th>
+    <th>Green used</th>
+    <th>Purple used</th>
+    <th>Red used</th>
+    <th>Yellow used</th>
+    <th>Blue used</th>
+    <th>Orange used</th>
+    <th>Tbsp used</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @days.each do |day| %>
+  <tr>
+    <td><%= day.weight %></td>
+    <td><%= day.workout %></td>
+    <td><%= day.water_consumed %></td>
+    <td><%= day.green_used %></td>
+    <td><%= day.purple_used %></td>
+    <td><%= day.red_used %></td>
+    <td><%= day.yellow_used %></td>
+    <td><%= day.blue_used %></td>
+    <td><%= day.orange_used %></td>
+    <td><%= day.tbsp_used %></td>
+    <td><%= link_to 'Show', [day.program, day] %></td>
+    <td><%= link_to 'Edit', edit_program_day_path(day.program, day) %></td>
+    <td><%= link_to 'Destroy', [day.program, day], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Day', new_program_day_path(params[:program_id]) %>

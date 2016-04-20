@@ -1,0 +1,53 @@
+
+
+<div class="panel panel-default">
+   <div class="panel-heading">
+      <strong>Day <%= @day.id %></strong>
+      <div class="start_weight">
+        <strong>Weight: </strong>
+        <%= @day.weight %>
+      </div>
+  </div>
+  <div class="panel-body">
+    <strong>Containers Used</strong>
+     <div>
+        <div class="green_container" id="tuperware">
+        <strong><%= @day.green_used %></strong>
+        </div>
+      </div>
+     <div>
+        <div class="purple_container" id="tuperware">
+        <strong><%= @day.purple_used %></strong>
+        </div>
+      </div> 
+      <div>
+        <div class="red_container" id="tuperware">
+        <strong><%= @day.red_used %></strong>
+        </div>
+      </div>
+      <div>
+        <div class="yellow_container" id="tuperware">
+        <strong><%= @day.yellow_used %></strong>
+        </div>
+      </div>
+     <div>
+        <div class="blue_container" id="tuperware">
+        <strong><%= @day.blue_used %></strong>
+        </div>
+      </div>
+     <div>
+        <div class="orange_container" id="tuperware">
+        <strong><%= @day.orange_used %></strong>
+        </div>
+      </div> 
+      <div>
+        <div class="tbsp_container" id="tuperware">
+        <strong><%= @day.tbsp_used %></strong>
+        </div>
+      </div>
+</div>
+<div class="panel-footer">
+      <%= link_to 'Edit', edit_program_day_path(@day.program, @day) %> |
+      <%= link_to 'Back', program_path(@day.program) %>
+      </div>
+</div>
