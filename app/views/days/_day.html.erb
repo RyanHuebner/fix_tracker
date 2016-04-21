@@ -51,3 +51,21 @@
       <%= link_to 'Back', program_path(@day.program) %>
       </div>
 </div>
+
+<h3>Today's Foods</h3>
+
+<% @foods.each do |food| %>
+      
+  <div class="well well-sm">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-2">
+          <div class="green_container" id="big-tuperware"><%= food.container_value %></div>
+        </div>
+        <div class="col-xs-2">
+          <h4><%= food.name %></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

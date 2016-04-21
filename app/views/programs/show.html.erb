@@ -47,8 +47,8 @@
       </div>
 </div>
     <div class="panel-footer">
-      <%= link_to 'Edit', edit_program_path(@program) %> |
-      <%= link_to 'Back', programs_path %>
+        <a href=<%= programs_path %> class="btn btn-primary btn-sm active" role="button">Back</a>
+        <a href=<%= edit_program_path(@program) %> class="btn btn-primary btn-sm active" role="button">Edit Program</a>
     </div>
 </div>
 
@@ -59,7 +59,7 @@
       <tr>
         <th>#</th>
         <th>Weight</th>
-        <th>water</th>
+        <th>Water</th>
         <th><div class="green_container" id="tuperware_header"></div></th>
         <th><div class="purple_container" id="tuperware_header"></div></th>
         <th><div class="red_container" id="tuperware_header"></div></th>
@@ -89,8 +89,9 @@
     </tbody>
   </table>
 </div>
-<br>
+<div class=" col-sm-10">
+    <a href=<%= new_program_day_path(@program.id) %> class="btn btn-primary btn active" role="button">Add Day</a>
+</div>
 
-<button><%= link_to 'Add Day', program_days_path(@program) %></button>
 
 

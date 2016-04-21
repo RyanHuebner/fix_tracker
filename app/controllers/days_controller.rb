@@ -2,6 +2,7 @@ class DaysController < ApplicationController
   before_action :set_days
   before_action :set_day, only: [:show, :edit, :update, :destroy]
   before_action :set_workouts
+  before_action :set_foods
 
   # GET programs/1/days
   def index
@@ -66,4 +67,9 @@ class DaysController < ApplicationController
     def set_workouts
       @workouts = Day.workouts
     end
+    
+    def set_foods
+      @foods = FoodItem.all
+    end  
+    
 end

@@ -76,4 +76,6 @@ class FoodItemsController < ApplicationController
     def set_container_colors
       @container_colors = FoodItem.container_colors
     end  
+  
+    
 end

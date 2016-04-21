@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :food_lists
   resources :food_items
   resources :programs do
     resources :days

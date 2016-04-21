@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160420195248) do
+ActiveRecord::Schema.define(version: 20160421043602) do
 
   create_table "days", force: :cascade do |t|
     t.integer  "program_id"
@@ -36,6 +36,17 @@ ActiveRecord::Schema.define(version: 20160420195248) do
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
   end
+
+  create_table "food_lists", force: :cascade do |t|
+    t.integer  "meal",         default: 0
+    t.integer  "day_id"
+    t.integer  "food_item_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "food_lists", ["day_id"], name: "index_food_lists_on_day_id"
+  add_index "food_lists", ["food_item_id"], name: "index_food_lists_on_food_item_id"
 
   create_table "programs", force: :cascade do |t|
     t.decimal  "start_weight"
