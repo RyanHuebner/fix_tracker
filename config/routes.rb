@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+  resources :developers
   resources :food_lists
   resources :food_items
   resources :programs do
