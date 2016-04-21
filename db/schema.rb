@@ -31,10 +31,10 @@ ActiveRecord::Schema.define(version: 20160420195248) do
 
   create_table "food_items", force: :cascade do |t|
     t.string   "name"
-    t.string   "container_color", default: "0"
-    t.string   "container_value"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.integer  "container_color", default: 0
+    t.integer  "container_value"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "programs", force: :cascade do |t|

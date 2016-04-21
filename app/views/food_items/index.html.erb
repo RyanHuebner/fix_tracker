@@ -2,28 +2,31 @@
 
 <h1>Listing Food Items</h1>
 
-<div class="table-responsive">
-  <table class="table table-striped table-hover">
-    <thead>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Container color</th>
+      <th>Container value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @food_items.each do |food_item| %>
       <tr>
-        <th>Name</th>
-        <th>Color</th>
-        <th>Value</th>
-        <th colspan="3"></th>
+        <td><%= food_item.name %></td>
+        <td><%= food_item.container_color %></td>
+        <td><%= food_item.container_value %></td>
+        <td><%= link_to 'Show', food_item %></td>
+        <td><%= link_to 'Edit', edit_food_item_path(food_item) %></td>
+        <td><%= link_to 'Destroy', food_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    </thead>
-  
-    <tbody>
-      <% @food_items.each do |food_item| %>
-        <tr>
-          <td><%= link_to food_item.name, edit_food_item_path(food_item) %></td>
-          <td><%= food_item.container_color %></td>
-          <td><%= food_item.container_value %></td>
-          <td><%= link_to 'Destroy', food_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
 
 <%= link_to 'New Food item', new_food_item_path %>
