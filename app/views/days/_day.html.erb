@@ -46,10 +46,10 @@
         </div>
       </div>
 </div>
-<div class="panel-footer">
-      <%= link_to 'Edit', edit_program_day_path(@day.program, @day) %> |
-      <%= link_to 'Back', program_path(@day.program) %>
-      </div>
+  <div class="panel-footer">
+      <a href=<%= program_path(@day.program) %> class="btn btn-primary btn-sm active" role="button">Back</a>
+      <a href=<%=  edit_program_day_path(@day.program, @day) %> class="btn btn-primary btn-sm active" role="button">Edit Program</a>
+    </div>
 </div>
 
 <h3>Today's Foods</h3>

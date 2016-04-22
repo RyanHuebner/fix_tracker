@@ -32,7 +32,8 @@
           <td><%= program.blue_limit %></td>
           <td><%= program.orange_limit %></td>
           <td><%= program.tbsp_limit %></td>
-          <td><%= link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><button type="button" class="btn btn-default"><%= link_to 'Destroy', program, method: :delete, 
+            data: { confirm: 'Are you sure?' } %></button></td>
         </tr>
       <% end %>
     </tbody>

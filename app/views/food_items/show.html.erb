@@ -1,19 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @food_item.name %>
-</p>
-
-<p>
-  <strong>Container color:</strong>
-  <%= @food_item.container_color %>
-</p>
-
-<p>
-  <strong>Container value:</strong>
-  <%= @food_item.container_value %>
-</p>
-
-<%= link_to 'Edit', edit_food_item_path(@food_item) %> |
-<%= link_to 'Back', food_items_path %>
+<div class="well well-sm">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-2">
+          <div class="green_container" id="big-tuperware"><%= @food_item.container_value %></div>
+        </div>
+        <div class="col-xs-4">
+          <h4><%= @food_item.name %></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <a href=<%= food_items_path %> class="btn btn-primary btn-sm active" role="button">Back</a>
+  <a href=<%=  edit_food_item_path(@food_item) %> class="btn btn-primary btn-sm active" role="button">Edit Food</a>
